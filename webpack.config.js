@@ -15,6 +15,18 @@ const VENDOR_LIBS = [
     "redux-thunk",
 ];
 
+const devServer = {
+    port: 4000,
+    open: true,
+    disableHostCheck: true, //remove info in terminal
+    historyApiFallback: true, //remove info in terminal
+    overlay: true, //remove info in terminal
+    stats: 'minimal', //remove info in terminal
+    inline: true, //remove info in terminal
+    compress: true, //remove info in terminal
+    contentBase: '/'
+}
+
 const config = {
     entry: {
         bundle: './src/index.js',
@@ -68,7 +80,8 @@ const config = {
                 }
             }
         }
-    }
+    },
+    devServer
 }
 
 module.exports = config;
